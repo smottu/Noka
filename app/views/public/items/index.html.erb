@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <h1>作物一覧</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <% @items.each do |item| %>
+      <%= item.name %>
+      <%= item.price %>
+    <% end %>
+  </div>
+</div>
