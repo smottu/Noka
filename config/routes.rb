@@ -6,11 +6,12 @@ Rails.application.routes.draw do
 
 
   devise_for :users
-  devise_for :admins
+  devise_for :admin
 
 
 
   namespace :admin do
+    resources :items, only: [:new, :create, :index, :show, :edit, :update, :destroy]
   end
 
   scope module: :public do

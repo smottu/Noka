@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <h1>作物一覧</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <%= form_with model: @item, url: admin_items_path, local: true do |f| %>
+        <%= %>
+        <%= f.text_field :item_name %>
+        <%= f.text_area :item_text %>
+        <%= f.text_area :item_amount %>
+      <% end %>
+    </div>
+  </div>
+</div>
