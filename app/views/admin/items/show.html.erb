@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <h1>登録した作物</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+
+      <%= @item.item_name %>
+      <%= @item.item_text %>
+      <%= @item.item_amount %>
+      <%= @item.is_active %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <%= link_to  "一覧へ戻る", admin_items_path %>
+    </div>
+  </div>
+</div>

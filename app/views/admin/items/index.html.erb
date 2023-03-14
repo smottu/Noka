@@ -12,11 +12,45 @@
         <%= f.label :item_name %><br>
         <%= f.text_field :item_name, class: "form-control" %><br>
         <%= f.label :item_text %><br>
-        <%=# f.text_area :item_text %><br>
+        <%= f.text_area :item_text, class: "form-control" %><br>
         <%= f.label :item_amount %><br>
-        <%=# f.text_area :item_amount %><br>
-        <%= f.submit "追加", class: "btn btn-success btn-lg btn-block" %>
+        <%= f.number_field :item_amount, class: "form-control" %><br>
+        <%= f.label :item_price %>
+        <%= f.text_field :item_price, class: "form-control" %>
+        <%= f.submit "追加", class: "btn btn-success btn-block mt-3" %>
       <% end %>
+    </div>
+  </div>
+
+
+
+  <div class="row m-5">
+    <div class="col-12 d-flex">
+      <table class="items">
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @items.each do |item| %>
+          <tr>
+            <th></th>
+            <th><%= item.item_name %></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
